@@ -26,6 +26,7 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php foreach ($tasks as $task): ?>
         <li>
             <?php echo htmlspecialchars($task['task']?? ''); ?><br><br>
+            <a href="edit_task.php?id=<?php echo $task['id']; ?>">Edit</a>
         </li>
     <?php endforeach; ?>
 </ul>
